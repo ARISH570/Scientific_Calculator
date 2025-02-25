@@ -24,7 +24,7 @@ void showMenu() {
 }
 
 long long factorial(int n) {
-    if (n < 0) return -1; // Error case
+    if (n < 0) return -1;
     if (n == 0 || n == 1) return 1;
     long long fact = 1;
     for (int i = 2; i <= n; i++) {
@@ -41,7 +41,7 @@ int main() {
         showMenu();
         cin >> choice;
 
-        if (cin.fail()) {  // Handle invalid input
+        if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Invalid input! Please enter a number from the menu.\n";
@@ -49,22 +49,22 @@ int main() {
         }
 
         switch (choice) {
-            case 1: // Addition
+            case 1: 
                 cout << "Enter two numbers: ";
                 cin >> num1 >> num2;
                 cout << "Result: " << num1 + num2 << endl;
                 break;
-            case 2: // Subtraction
+            case 2: 
                 cout << "Enter two numbers: ";
                 cin >> num1 >> num2;
                 cout << "Result: " << num1 - num2 << endl;
                 break;
-            case 3: // Multiplication
+            case 3: 
                 cout << "Enter two numbers: ";
                 cin >> num1 >> num2;
                 cout << "Result: " << num1 * num2 << endl;
                 break;
-            case 4: // Division
+            case 4: 
                 cout << "Enter two numbers: ";
                 cin >> num1 >> num2;
                 if (num2 == 0)
@@ -72,12 +72,12 @@ int main() {
                 else
                     cout << "Result: " << num1 / num2 << endl;
                 break;
-            case 5: // Power
+            case 5: 
                 cout << "Enter base and exponent: ";
                 cin >> num1 >> num2;
                 cout << "Result: " << pow(num1, num2) << endl;
                 break;
-            case 6: // Square Root
+            case 6: 
                 cout << "Enter number: ";
                 cin >> num1;
                 if (num1 < 0)
@@ -85,7 +85,7 @@ int main() {
                 else
                     cout << "Result: " << sqrt(num1) << endl;
                 break;
-            case 7: // Log (Base 10)
+            case 7: 
                 cout << "Enter number: ";
                 cin >> num1;
                 if (num1 <= 0)
@@ -93,7 +93,7 @@ int main() {
                 else
                     cout << "Result: " << log10(num1) << endl;
                 break;
-            case 8: // Natural Log
+            case 8: 
                 cout << "Enter number: ";
                 cin >> num1;
                 if (num1 <= 0)
@@ -101,17 +101,17 @@ int main() {
                 else
                     cout << "Result: " << log(num1) << endl;
                 break;
-            case 9: // Sine
+            case 9: 
                 cout << "Enter angle in degrees: ";
                 cin >> num1;
                 cout << "Result: " << sin(num1 * M_PI / 180) << endl;
                 break;
-            case 10: // Cosine
+            case 10;
                 cout << "Enter angle in degrees: ";
                 cin >> num1;
                 cout << "Result: " << cos(num1 * M_PI / 180) << endl;
                 break;
-            case 11: // Tangent
+            case 11: 
                 cout << "Enter angle in degrees: ";
                 cin >> num1;
                 if (fmod(num1, 90) == 0 && fmod(num1, 180) != 0)
@@ -119,7 +119,7 @@ int main() {
                 else
                     cout << "Result: " << tan(num1 * M_PI / 180) << endl;
                 break;
-            case 12: // Factorial
+            case 12: 
                 int n;
                 cout << "Enter a non-negative integer: ";
                 cin >> n;
